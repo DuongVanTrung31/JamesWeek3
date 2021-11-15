@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hiển thị số Fibonacci</title>
+</head>
+<body>
+    <script>
+        let n = +prompt('Nhập số lượng số fibonacci cần in:')
+        let count = 0;
+        let f1 = 0;
+        let f2 = 1;
+        if(n <= 0) {
+            alert("Vui lòng nhập đúng số")
+        } else {
+            while (count < n) { 
+                let fn;
+                fn = f1 + f2;
+                document.write(f1 + '<br>');
+                f1 = f2;
+                f2 = fn;
+                count++;
+            }
+        }
+    </script>
+</body>
+</html>
