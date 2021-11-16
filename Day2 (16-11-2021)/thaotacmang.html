@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thao tác mảng</title>
+</head>
+<body style="padding-top: 20px">
+    <input type="text" id="txtValue">
+    <input type="button" id="btnAdd" value="add" onclick="addArr()";>
+    <input type="button" id="btnDisplay" value="display" onclick="displayArr()";>
+    <div id="result"></div>
+    <script>
+        let x = 0;
+        let array = Array();
+        function addArr() {
+            array[x] = document.getElementById('txtValue').value;
+            alert("Element: " + array[x] + ' Added at index ' + x);
+            x++;
+            document.getElementById('txtValue').value = '';
+        }
+        function displayArr() {
+            let e = '<hr>';
+            for (let index = 0; index < array.length; index++) {
+                e += 'Element ' + index + ' = ' + array[index] + '<br>';
+            }
+            document.getElementById('result').innerHTML = e;
+        }
+    </script>
+</body>
+</html>
