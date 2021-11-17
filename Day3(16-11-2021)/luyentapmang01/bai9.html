@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 9</title>
+</head>
+<body>
+    <script>
+        //Nhập mảng A
+        let num1 = +prompt(` Nhập số lượng mảng A`);
+        let arr1 = new Array(num1);
+        for (let i = 0 ; i < arr1.length ; i++) {
+            arr1[i] = prompt(` Nhập phần tử thứ : ${i + 1} vào mảng A`);
+        }
+        // Nhập mảng B
+        let num2 = +prompt(` Nhập số lượng mảng B`);
+        let arr2 = new Array(num2);
+        for (let i = 0 ; i < arr2.length ; i++) {
+            arr2[i] = prompt(` Nhập phần tử thứ : ${i + 1} vào mảng B`);
+        }
+        let arr3 = [...arr2,...arr1];
+        document.write(` Mảng A gồm : ${arr1}?<br>`);
+        document.write(` Mảng B gồm : ${arr2}<br>`);
+        document.write(` Mảng C gồm : ${arr3}`);
+    </script>
+</body>
+</html>
