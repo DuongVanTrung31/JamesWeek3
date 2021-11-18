@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiểm tra số nguyên tố</title>
+</head>
+<body>
+    <script>
+        function isPrime(num) {
+            let output = false;
+            if (num < 2) {
+                return output;
+            }
+            else if (num === 2) {
+                return output = true;
+            }
+            else if (num === 3) {
+                return output = true;
+            } else {
+                for (let i = 2; i <= Math.sqrt(num); i++) {
+                    if ( num % i === 0) {
+                        return output;
+                    } else {
+                        return output = true;
+                    }
+                }
+            }
+        }
+
+    console.log(isPrime(0));
+    console.log(isPrime(3));
+    console.log(isPrime(4));
+    console.log(isPrime(432));
+    console.log(isPrime(103));
+    </script>
+</body>
+</html>

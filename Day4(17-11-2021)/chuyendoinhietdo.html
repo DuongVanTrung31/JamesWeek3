@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chuyển đổi nhiệt độ</title>
+</head>
+<body>
+    <form>
+        <h1>Temperature Converter</h1>
+        <h4>Type a value in the Fahrenheit field to convert the value to Celcius:</h4>
+        <label>Fahrenheit : <input type="number" id="input" oninput="changeF(this.value)" onchange="changeF(this.value)"></label>
+        <h3>Celcius: <span id="result"></span></h3>
+    </form>
+    <script>
+        function changeF(input) {
+            input = parseFloat(input);
+            document.getElementById('result').innerHTML = ((input - 32)/1.8).toFixed(2);
+        }
+    </script>
+</body>
+</html>
