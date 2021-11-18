@@ -8,25 +8,20 @@
 </head>
 <body>
     <script>
-        function isPrime(num) {
-            let output = false;
+        function isPrime(number) {
+            let num = parseInt(number);
             if (num < 2) {
-                return output;
-            }
-            else if (num === 2) {
-                return output = true;
-            }
-            else if (num === 3) {
-                return output = true;
+                return false;
             } else {
                 for (let i = 2; i <= Math.sqrt(num); i++) {
                     if ( num % i === 0) {
-                        return output;
+                        return false;
                     } else {
-                        return output = true;
+                        return true;
                     }
                 }
             }
+            return true;
         }
 
     console.log(isPrime(0));
