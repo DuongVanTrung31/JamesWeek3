@@ -8,13 +8,21 @@
 </head>
 <body>
     <script>
-        function checkSym(arr , symbol) {
-            return arr.indexOf(symbol);
-        }
 
-        console.log(checkSym(["-",42,"2",true,'+','#','$'],'+'));// 4
-        console.log(checkSym(["-",42,"2",true,'+','#','$'],'$'));// 6
-        console.log(checkSym(["-",42,"2",true,'+','#','$'],'*'));// -1
+
+    function checkSymbol(arr, sym) {
+        let count = -1;
+        for (let i = 0; i < arr.length; i++) {
+            if (sym == arr[i]) {
+                count = 0;
+                count++;
+            }
+        }
+        return count;
+    }
+    let str = prompt("Nhập thử đi");
+    let sym = prompt("ký tự cần kiểm tra");
+    alert(checkSymbol(str, sym));
     </script>
 </body>
 </html>

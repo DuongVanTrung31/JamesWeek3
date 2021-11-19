@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý sản phẩm</title>
+</head>
+<body>
+        <h2>Add New Product</h2>
+        <div id="container">
+            <input type="text" id="textInput">
+                <button onclick="add(matHang)">Add</button>
+            <input type="text" id="edit"><button onclick="edit(matHang,i)">Edit</button>
+                
+        </div>
+        <table id="displayVal"></table>
+    <script>
+        let matHang = [];
+        let index = 0;
+        function add(matHang) {
+            let newValue = document.getElementById('textInput').value;
+            matHang.push(newValue);
+            document.querySelector('#displayVal').innerHTML = display(matHang);
+        }
+        
+        function display(input) {
+            let rowValue = '<tr>';
+            for (let i = 0; i < input.length ; i++){
+                rowValue += `<td>${i+1}.</td>`;
+                rowValue += `<td class='tenSp'> ${input[i]}</td>`;
+                rowValue += `<td><button onclick='edit(matHang,${i})'>Edit</button></td>`;
+                rowValue += `<td><button onclick='del(matHang,${i})'>Delete</button></td>`;
+                rowValue += `</tr>`;
+                index = i;
+            }
+            return rowValue;
+        }
+
+        function edit(arr, i) {
+            
+        }
+
+        function del(arr, i) {
+            arr.splice(i,1);
+            document.querySelector('#displayVal').innerHTML = display(arr);
+        }
+    </script>
+</body>
+</html>
